@@ -4,10 +4,9 @@
 |---|---|
 | 授权编号 | **GXSEC-2026F-014-01** |
 | 对象类型 | 课程组自建（样本 App + 模拟播放服务端） |
-| 靶场对象（课件） | 大师兄影视 v1.0.3 |
-| bundle id | `com.wenwan.tungshing.dsy.ipa` |
+| 靶场对象（课件） | 样本 App（代号 `LAB-APP-01`） |
 | 课件包 | `assets/移动应用安全与逆向分析_第一课_授权靶场.ipa` |
-| **源码包** | `移动应用安全与逆向分析_第一课_源码包_授权靶场.zip`（豆豆视频 v1.0.4 Electron 源码） |
+| **源码包** | `移动应用安全与逆向分析_第一课_源码包_授权靶场.zip`（桌面端工程源码，代号 `LAB-SRC-01`） |
 | 实验平台 | **macOS**（Electron 打包 dmg）—— 用你自己的 Mac，或用课程组打包机 `LAB-MAC-01` / `LAB-MAC-02`（课程群预约） |
 | 有效期 | 至 2027-01-31 |
 
@@ -82,11 +81,11 @@ sha256：2d0067fcbf7946e0d86c6d97f6d5938a7c1a80718eb695a206bbbd76f4ed066b
 
 ```bash
 curl -L -o 移动应用安全与逆向分析_第一课_源码包_授权靶场.zip \
-  "https://github.com/houshushu/authorized-practice-range/releases/download/lab01/SEC-4217_lab01_source_doudou-video_v1.0.4.zip"
+  "https://github.com/houshushu/authorized-practice-range/releases/download/lab01/SEC-4217_lab01_source.zip"
 shasum -a 256 移动应用安全与逆向分析_第一课_源码包_授权靶场.zip
 ```
 
-解压后即 `豆豆视频`（`doudou-video-desktop`）v1.0.4 源码，`npm install && npm run dist` 出 dmg。
+解压后即桌面端工程源码，`npm install && npm run dist` 出 dmg。
 
 ## 四、环境怎么起
 
@@ -104,7 +103,7 @@ cd 源码 && npm install && npm start
 ```
 
 > 说明：**本课不需要 `setup/` 脚本** —— 环境就是 macOS + Node.js（见下表），不像 iOS 课次那样要起靶机、拿环境包。
-> 源码包解压后的目录名是 `源码`（里面才是 `豆豆视频` 工程），命令按实际目录名写。
+> 源码包解压后的目录名是 `源码`（里面才是工程目录），命令按实际目录名写。
 
 环境可重建、可丢弃：搞坏了重新解压源码包从头来，不要去修。
 
